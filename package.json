@@ -1,0 +1,21 @@
+{
+  "name": "erine-portfolio-cms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editable portfolio website with a lightweight admin dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.2"
+  }
+}

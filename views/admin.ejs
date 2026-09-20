@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="csrf-token" content="<%= csrfToken %>" />
+  <title>Admin Dashboard — Erine Portfolio</title>
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body class="admin-page">
+  <aside class="admin-sidebar">
+    <div>
+      <a class="admin-brand" href="/">ERINE<span>®</span></a>
+      <p class="sidebar-label">Portfolio CMS</p>
+    </div>
+    <nav class="admin-nav" aria-label="Admin sections">
+      <button class="nav-item is-active" data-tab="general">Overview</button>
+      <button class="nav-item" data-tab="about">About & Skills</button>
+      <button class="nav-item" data-tab="projects">Projects <span id="project-count"></span></button>
+      <button class="nav-item" data-tab="experience">Experience</button>
+      <button class="nav-item" data-tab="achievements">Achievements</button>
+      <button class="nav-item" data-tab="backup">Backup</button>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="/" target="_blank" rel="noreferrer">View portfolio ↗</a>
+      <form method="post" action="/admin/logout">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <button type="submit" class="text-button">Log out</button>
+      </form>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div>
+        <p class="kicker">Content dashboard</p>
+        <h1 id="page-title">Overview</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="save-state" id="save-state">All changes saved</span>
+        <button class="primary-btn" id="save-all" type="button">Save changes</button>
+      </div>
+    </header>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <section class="admin-tab is-active" data-panel="general">
+      <div class="panel-heading">
+        <div><p class="kicker">Public identity</p><h2>Portfolio overview</h2></div>
+        <p>These fields control the hero, social links, contact details and key images used throughout the public website.</p>
+      </div>
+      <div class="form-grid two-col">
+        <label>Full name<input id="site-name" /></label>
+        <label>Role<input id="site-role" /></label>
+        <label>Location<input id="site-location" /></label>
+        <label>Hero eyebrow<input id="site-hero-eyebrow" /></label>
+        <label class="full">Hero title<textarea id="site-hero-title" rows="2"></textarea></label>
+        <label class="full">Hero intro<textarea id="site-hero-intro" rows="4"></textarea></label>
+        <label>Availability text<input id="site-availability" /></label>
+        <label>Email<input id="site-email" type="email" /></label>
+        <label>Phone<input id="site-phone" /></label>
+        <label>Instagram URL<input id="site-instagram" type="url" /></label>
+        <label>Instagram label<input id="site-instagram-label" /></label>
+        <label>Behance URL<input id="site-behance" type="url" /></label>
+        <label>Behance label<input id="site-behance-label" /></label>
+        <label>Featured project<select id="site-featured"></select></label>
+      </div>
+
+      <div class="media-grid">
+        <article class="media-editor">
+          <div><p class="kicker">Hero artwork</p><h3>Cover image</h3></div>
+          <img id="preview-hero" alt="Hero preview" />
+          <input type="hidden" id="site-hero-image" />
+          <label class="upload-btn">Replace image<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" data-upload="site-hero-image" data-preview="preview-hero" hidden /></label>
+        </article>
+        <article class="media-editor">
+          <div><p class="kicker">Profile</p><h3>Portrait image</h3></div>
+          <img id="preview-portrait" alt="Portrait preview" />
+          <input type="hidden" id="site-portrait-image" />
+          <label class="upload-btn">Replace image<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" data-upload="site-portrait-image" data-preview="preview-portrait" hidden /></label>
+        </article>
+        <article class="media-editor">
+          <div><p class="kicker">Contact</p><h3>Closing artwork</h3></div>
+          <img id="preview-contact" alt="Contact preview" />
+          <input type="hidden" id="site-contact-image" />
+          <label class="upload-btn">Replace image<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" data-upload="site-contact-image" data-preview="preview-contact" hidden /></label>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-tab" data-panel="about">
+      <div class="panel-heading"><div><p class="kicker">Profile copy</p><h2>About & skills</h2></div><p>Update the introduction shown below the hero and manage the technical skill chips.</p></div>
+      <div class="form-grid">
+        <label>Eyebrow<input id="about-eyebrow" /></label>
+        <label>Heading<input id="about-title" /></label>
+        <label class="full">Lead paragraph<textarea id="about-lead" rows="5"></textarea></label>
+        <label class="full">Body paragraph<textarea id="about-body" rows="7"></textarea></label>
+        <label class="full">Quote / statement<textarea id="about-statement" rows="3"></textarea></label>
+        <label class="full">Skills <span class="hint">Separate each skill with a comma</span><textarea id="skills" rows="4"></textarea></label>
+      </div>
+    </section>
+
+    <section class="admin-tab" data-panel="projects">
+      <div class="panel-heading split-heading">
+        <div><p class="kicker">Portfolio archive</p><h2>Projects</h2></div>
+        <button class="primary-btn" id="add-project" type="button">+ Add project</button>
+      </div>
+      <div class="project-admin-grid" id="project-admin-grid"></div>
+    </section>
+
+    <section class="admin-tab" data-panel="experience">
+      <div class="panel-heading split-heading"><div><p class="kicker">Career timeline</p><h2>Experience</h2></div><button class="secondary-btn" id="add-experience" type="button">+ Add experience</button></div>
+      <div class="sortable-list" id="experience-list"></div>
+    </section>
+
+    <section class="admin-tab" data-panel="achievements">
+      <div class="panel-heading split-heading"><div><p class="kicker">Recognition</p><h2>Achievements</h2></div><button class="secondary-btn" id="add-achievement" type="button">+ Add achievement</button></div>
+      <div class="sortable-list" id="achievement-list"></div>
+    </section>
+
+    <section class="admin-tab" data-panel="backup">
+      <div class="panel-heading"><div><p class="kicker">Portable content</p><h2>Backup & restore</h2></div><p>Download your portfolio content as JSON or restore a previous export. Uploaded image files are stored separately in the Docker volume.</p></div>
+      <div class="backup-grid">
+        <article class="backup-card"><h3>Export content</h3><p>Downloads all text, project settings and image references.</p><a class="secondary-btn link-btn" href="/admin/api/export">Download JSON backup</a></article>
+        <article class="backup-card"><h3>Restore content</h3><p>Select a JSON backup generated by this dashboard. Review the site after restoring.</p><label class="secondary-btn upload-btn">Choose JSON backup<input id="import-json" type="file" accept="application/json,.json" hidden /></label></article>
+      </div>
+      <div class="security-note"><strong>Deployment note.</strong> Change <code>ADMIN_PASSWORD</code> and <code>SESSION_SECRET</code> in your <code>.env</code> before exposing the admin dashboard to the internet. For HTTPS deployments, set <code>COOKIE_SECURE=true</code>.</div>
+    </section>
+  </main>
+
+  <dialog id="project-editor" class="editor-dialog">
+    <form id="project-form" method="dialog">
+      <div class="dialog-head"><div><p class="kicker">Project editor</p><h2 id="project-editor-title">Edit project</h2></div><button class="icon-btn" type="button" id="close-project-editor" aria-label="Close">×</button></div>
+      <input type="hidden" id="project-id" />
+      <div class="form-grid two-col compact">
+        <label>Project title<input id="project-title" required /></label>
+        <label>Category<select id="project-category"><option value="illustration">Illustration</option><option value="mascot">Mascot</option><option value="printing">Printing</option><option value="apparel">Apparel</option><option value="character">Character</option><option value="packaging">Packaging</option><option value="social">Social Media</option></select></label>
+        <label class="full">Label / subtitle<input id="project-label" /></label>
+        <label class="full">Description<textarea id="project-description" rows="6"></textarea></label>
+        <label class="full">Tags <span class="hint">Comma separated</span><input id="project-tags" /></label>
+        <label class="check-label"><input id="project-visible" type="checkbox" /> Visible on public website</label>
+      </div>
+
+      <div class="project-media-editor">
+        <div class="media-row">
+          <div><p class="kicker">Cover image</p><img id="project-cover-preview" class="project-cover-preview" alt="Project cover preview" /></div>
+          <div><input id="project-cover" type="hidden" /><label class="upload-btn">Upload cover<input id="project-cover-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden /></label><p class="hint">Recommended: square or landscape, JPG/PNG/WEBP.</p></div>
+        </div>
+        <div><div class="gallery-head"><div><p class="kicker">Gallery</p><h3>Project images</h3></div><label class="upload-btn">Add images<input id="project-gallery-files" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden /></label></div><div class="gallery-admin" id="project-gallery"></div></div>
+      </div>
+      <div class="dialog-actions"><button class="text-button" type="button" id="cancel-project">Cancel</button><button class="primary-btn" type="submit">Apply project changes</button></div>
+    </form>
+  </dialog>
+
+  <script src="/admin.js" defer></script>
+</body>
+</html>

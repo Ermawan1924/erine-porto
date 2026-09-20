@@ -1,0 +1,276 @@
+{
+  "site": {
+    "name": "Erine Palba Febmiani",
+    "role": "Illustrator & Graphic Designer",
+    "location": "Indonesia",
+    "heroEyebrow": "Illustrator · Graphic Designer · Indonesia",
+    "heroTitle": "Stories, culture & brands drawn into visual worlds.",
+    "heroIntro": "I’m Erine Palba Febmiani, an illustrator and graphic designer creating expressive visual identities, campaigns, characters, packaging and editorial artwork.",
+    "availability": "Available for creative collaboration",
+    "email": "erinepalba@gmail.com",
+    "phone": "+62 821 7704 4970",
+    "instagram": "https://www.instagram.com/rinetaku",
+    "instagramLabel": "@rinetaku",
+    "behance": "https://www.behance.net/erinepalba",
+    "behanceLabel": "behance.net/erinepalba",
+    "heroImage": "/assets/page-01.jpg",
+    "portraitImage": "/assets/portrait-erine.jpg",
+    "contactImage": "/assets/page-37.jpg",
+    "featuredProjectId": "bni-calendar-2024"
+  },
+  "about": {
+    "eyebrow": "Hello, I’m",
+    "title": "Erine.",
+    "lead": "A graphic designer and illustrator from Indonesia. Over the past four years, I have actively participated in national competitions and worked on illustration projects for a diverse range of clients.",
+    "body": "My work moves between commercial design and narrative illustration—mascots, cultural storytelling, annual reports, calendars, product packaging and social content. I enjoy research-heavy projects where visual storytelling can make complex ideas feel immediate and memorable.",
+    "statement": "In every stroke of the pen and pixel perfected, lies a story waiting to unfold."
+  },
+  "skills": ["Photoshop", "Lightroom", "Procreate", "Premiere Pro", "CorelDRAW"],
+  "projects": [
+    {
+      "id": "graco-mascot",
+      "title": "Graco Mascot",
+      "category": "mascot",
+      "label": "Mascot / Brand Character",
+      "cover": "/assets/page-05.jpg",
+      "pages": ["/assets/page-05.jpg"],
+      "description": "A friendly coconut character created as part of PT Graha Mitra Lestarindo’s branding. The mascot was designed to support brand recognition across marketing materials, digital platforms and product touchpoints.",
+      "tags": ["Mascot", "Branding", "Character"],
+      "visible": true
+    },
+    {
+      "id": "siko",
+      "title": "SIKO",
+      "category": "mascot",
+      "label": "Mascot / Character",
+      "cover": "/assets/page-07.jpg",
+      "pages": ["/assets/page-07.jpg"],
+      "description": "A cheerful character system translated across a presentation board and merchandise mockups.",
+      "tags": ["Mascot", "Merchandise"],
+      "visible": true
+    },
+    {
+      "id": "female-character-illustration",
+      "title": "Female Character Illustration",
+      "category": "character",
+      "label": "Character / Illustration",
+      "cover": "/assets/page-08.jpg",
+      "pages": ["/assets/page-08.jpg"],
+      "description": "An original female character study showing sketch development, color palette exploration and the final rendered illustration.",
+      "tags": ["Character", "Digital Illustration"],
+      "visible": true
+    },
+    {
+      "id": "chomi-chimi",
+      "title": "Chomi Chimi",
+      "category": "character",
+      "label": "Character / Sticker Series",
+      "cover": "/assets/page-09.jpg",
+      "pages": ["/assets/page-09.jpg"],
+      "description": "A character branding project featuring a signature duo of charming chinchillas, developed for merchandise and sticker sheets.",
+      "tags": ["Character", "Stickers", "Merchandise"],
+      "visible": true
+    },
+    {
+      "id": "graha-mitra-profile",
+      "title": "Graha Mitra Lestarindo Profile",
+      "category": "printing",
+      "label": "Printing / Company Profile",
+      "cover": "/assets/page-10.jpg",
+      "pages": ["/assets/page-10.jpg", "/assets/page-11.jpg"],
+      "description": "Company profile and brochure layouts for a charcoal product brand, balancing product information, brand identity and editorial hierarchy.",
+      "tags": ["Brochure", "Print", "Layout"],
+      "visible": true
+    },
+    {
+      "id": "bni-calendar-2024",
+      "title": "BNI Calendar 2024",
+      "category": "illustration",
+      "label": "Illustration / Calendar",
+      "cover": "/assets/page-14.jpg",
+      "pages": ["/assets/page-13.jpg", "/assets/page-14.jpg"],
+      "description": "An illustrated calendar project combining artistic storytelling with a practical calendar format. The work moves from ideation and sketch development into a colorful final composition.",
+      "tags": ["Illustration", "Calendar", "2024"],
+      "visible": true
+    },
+    {
+      "id": "bank-sultra-calendar-2025",
+      "title": "Bank Sultra Calendar 2025",
+      "category": "illustration",
+      "label": "Illustration / Culture",
+      "cover": "/assets/page-15.jpg",
+      "pages": ["/assets/page-15.jpg"],
+      "description": "A calendar illustration exploring Southeast Sulawesi culture, traditional fabrics, local sites, endemic animals and history through research-led visual storytelling.",
+      "tags": ["Culture", "Research", "Calendar"],
+      "visible": true
+    },
+    {
+      "id": "mandala-finance-calendar-2025",
+      "title": "Mandala Finance Calendar 2025",
+      "category": "illustration",
+      "label": "Illustration / Campaign",
+      "cover": "/assets/page-16.jpg",
+      "pages": ["/assets/page-16.jpg", "/assets/page-17.jpg"],
+      "description": "The visual concept presents Mandala Finance as a companion across customers’ life journeys, using a lively illustrated world to connect financing services with everyday aspirations.",
+      "tags": ["Illustration", "Concept", "Finance"],
+      "visible": true
+    },
+    {
+      "id": "cheng-ho-the-explorer",
+      "title": "Cheng Ho — The Explorer",
+      "category": "illustration",
+      "label": "Award-Winning Illustration",
+      "cover": "/assets/page-18.jpg",
+      "pages": ["/assets/page-18.jpg"],
+      "description": "First-place illustration in a 2022 competition by the Consulate General of the PRC in Bali. The work tells a historical story of Cheng Ho’s voyages and cultural exchange with the Nusantara.",
+      "tags": ["1st Winner", "History", "Culture"],
+      "visible": true
+    },
+    {
+      "id": "wondr-bni-annual-report",
+      "title": "WONDR BNI Annual Report",
+      "category": "illustration",
+      "label": "Editorial / Cover Illustration",
+      "cover": "/assets/page-19.jpg",
+      "pages": ["/assets/page-19.jpg"],
+      "description": "A cover illustration created to visually introduce BNI’s digital-banking transformation and the launch of WONDR BNI with a vibrant, user-centered visual language.",
+      "tags": ["Annual Report", "BNI", "Editorial"],
+      "visible": true
+    },
+    {
+      "id": "from-local-to-global-bni",
+      "title": "From Local to Global — BNI",
+      "category": "illustration",
+      "label": "Annual Report / Illustration",
+      "cover": "/assets/page-20.jpg",
+      "pages": ["/assets/page-20.jpg", "/assets/page-21.jpg"],
+      "description": "An editorial illustration that connects local economic activity, digital banking and global ambition through a dense narrative composition.",
+      "tags": ["BNI", "Annual Report", "Illustration"],
+      "visible": true
+    },
+    {
+      "id": "digitalization-to-free-the-nation",
+      "title": "Digitalization to Free the Nation",
+      "category": "illustration",
+      "label": "Competition / Telkom Indonesia",
+      "cover": "/assets/page-23.jpg",
+      "pages": ["/assets/page-22.jpg", "/assets/page-23.jpg"],
+      "description": "Favorite winner in a 2022 Telkom Indonesia competition. The illustration explores digital transformation, connectivity and wider access to technology across Indonesia.",
+      "tags": ["Favorite Winner", "Telkom", "Digitalization"],
+      "visible": true
+    },
+    {
+      "id": "tehbotol-nature-culture",
+      "title": "Tehbotol — Nature & Culture",
+      "category": "packaging",
+      "label": "Product / Illustration",
+      "cover": "/assets/page-24.jpg",
+      "pages": ["/assets/page-24.jpg", "/assets/page-25.jpg"],
+      "description": "A product-focused visual concept combining Indonesian biodiversity, cultural traditions and sustainability stories such as Sasi Laut, Dayak Iban forest stewardship and Bali’s Subak irrigation system.",
+      "tags": ["Product", "Culture", "Sustainability"],
+      "visible": true
+    },
+    {
+      "id": "tular-nalar-poster-2023",
+      "title": "Tular Nalar Poster 2023",
+      "category": "illustration",
+      "label": "Poster / Competition",
+      "cover": "/assets/page-26.jpg",
+      "pages": ["/assets/page-26.jpg"],
+      "description": "A poster project about online scams and misinformation, encouraging careful verification and wiser use of social media.",
+      "tags": ["Poster", "Digital Safety", "2023"],
+      "visible": true
+    },
+    {
+      "id": "beauty-in-pain",
+      "title": "Beauty in Pain",
+      "category": "apparel",
+      "label": "Apparel / T-Shirt Design",
+      "cover": "/assets/page-27.jpg",
+      "pages": ["/assets/page-27.jpg"],
+      "description": "Third-place Rekhas Apparel competition entry. The concept contrasts Indonesia’s outward beauty with internal challenges, represented through a heroic figure marked by visible wounds.",
+      "tags": ["3rd Winner", "T-Shirt", "2024"],
+      "visible": true
+    },
+    {
+      "id": "nusantara-delights",
+      "title": "Nusantara Delights",
+      "category": "apparel",
+      "label": "Apparel / T-Shirt Design",
+      "cover": "/assets/page-28.jpg",
+      "pages": ["/assets/page-28.jpg"],
+      "description": "A second-place Matsuda Apparel design celebrating Indonesian traditional snacks such as pukis, klepon, surabi and bakso in a playful, detailed composition.",
+      "tags": ["2nd Winner", "Food Culture", "Apparel"],
+      "visible": true
+    },
+    {
+      "id": "hugo-nft-character",
+      "title": "Hugo — NFT Character",
+      "category": "character",
+      "label": "Character / NFT",
+      "cover": "/assets/page-29.jpg",
+      "pages": ["/assets/page-29.jpg"],
+      "description": "Character attribute production for the Anagata NFT project, including body, head, mouth, prosthetic hands, neck and backgrounds with cyberpunk-inspired styling.",
+      "tags": ["NFT", "Character", "Cyberpunk"],
+      "visible": true
+    },
+    {
+      "id": "perfume-campaign",
+      "title": "Perfume Campaign",
+      "category": "social",
+      "label": "Social Media / Advertising",
+      "cover": "/assets/page-30.jpg",
+      "pages": ["/assets/page-30.jpg"],
+      "description": "A polished perfume campaign system using warm product photography, floral elements and atmospheric art direction.",
+      "tags": ["Campaign", "Product", "Social Media"],
+      "visible": true
+    },
+    {
+      "id": "charcoal-packaging",
+      "title": "Charcoal Packaging",
+      "category": "packaging",
+      "label": "Packaging / Product",
+      "cover": "/assets/page-31.jpg",
+      "pages": ["/assets/page-31.jpg"],
+      "description": "Packaging design and structural layout for a charcoal product, combining bold orange branding with clear product features and retail-ready visual hierarchy.",
+      "tags": ["Packaging", "Dieline", "Product"],
+      "visible": true
+    },
+    {
+      "id": "coconut-charcoal-campaign",
+      "title": "Coconut Charcoal Campaign",
+      "category": "social",
+      "label": "Social Media / Brand Content",
+      "cover": "/assets/page-32.jpg",
+      "pages": ["/assets/page-32.jpg"],
+      "description": "A visual content series positioning coconut charcoal through product-centered compositions and nature-driven imagery.",
+      "tags": ["Social Media", "Art Direction", "Charcoal"],
+      "visible": true
+    },
+    {
+      "id": "social-media-art-direction",
+      "title": "Social Media Art Direction",
+      "category": "social",
+      "label": "Social Media / Content System",
+      "cover": "/assets/page-34.jpg",
+      "pages": ["/assets/page-33.jpg", "/assets/page-34.jpg", "/assets/page-35.jpg", "/assets/page-36.jpg"],
+      "description": "A collection of monthly visual content systems. The work uses product shots, graphic compositions, color, captions and calls-to-action to create consistent brand communication across social channels.",
+      "tags": ["Social Media", "Content", "Art Direction"],
+      "visible": true
+    }
+  ],
+  "experiences": [
+    {"id": "exp-1", "period": "2023—Current", "title": "Graphic Designer & Digital Marketing", "company": "PT. Graha Mitra Lestarindo"},
+    {"id": "exp-2", "period": "2022", "title": "MT Sales Supervisor", "company": "PT. Unitama Sarimas"},
+    {"id": "exp-3", "period": "2020—Current", "title": "Freelance Designer", "company": "Independent creative practice"},
+    {"id": "exp-4", "period": "2021", "title": "Architectural Intern — 3D Building Designer", "company": "PT. Faya Kuntura Agung Konsultindo"}
+  ],
+  "achievements": [
+    {"id": "ach-1", "rank": "1st Winner", "title": "Illustration Competition — Konsulat Jenderal RRC Bali, 2022"},
+    {"id": "ach-2", "rank": "Favorite Winner", "title": "Telkom Indonesia Illustration Competition, 2022"},
+    {"id": "ach-3", "rank": "2nd Winner", "title": "Matsuda Apparel T-Shirt Design, 2022"},
+    {"id": "ach-4", "rank": "Top 10", "title": "Tular Nalar Poster Competition, 2023"},
+    {"id": "ach-5", "rank": "3rd Winner", "title": "Rekhas Apparel Design Competition, 2024"},
+    {"id": "ach-6", "rank": "1st Winner", "title": "Colour4Life Competition — Faber-Castell, 2021"}
+  ]
+}

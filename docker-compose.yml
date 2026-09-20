@@ -1,0 +1,25 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: erine-portfolio-cms
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      ADMIN_USER: "${ADMIN_USER:-admin}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:-change-me-now}"
+      SESSION_SECRET: "${SESSION_SECRET:-please-change-this-session-secret}"
+      COOKIE_SECURE: "${COOKIE_SECURE:-false}"
+      DATA_DIR: /app/data
+      UPLOAD_DIR: /app/public/uploads
+    volumes:
+      - portfolio_data:/app/data
+      - portfolio_uploads:/app/public/uploads
+
+volumes:
+  portfolio_data:
+  portfolio_uploads:
