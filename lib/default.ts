@@ -1,0 +1,55 @@
+import type { Content } from "./types";
+const s = (n: number) => `/seed/p-${String(n).padStart(2, "0")}.jpg`;
+const P = (id: string, title: string, category: string, year: string, description: string, pages: number[]) => ({
+  id, title, category, year, description, cover: s(pages[0]), images: pages.map(s),
+});
+export const defaultContent: Content = {
+  profile: {
+    name: "Erine Palba Febmiani",
+    role: "Illustrator & Graphic Designer",
+    tagline: "Every stroke of the pen and pixel perfected holds a story waiting to unfold.",
+    intro: "I'm an illustrator and graphic designer from Indonesia. Over the past four years I have actively joined national competitions and worked on illustration projects for a diverse range of clients, from banks to beverage brands, turning ideas into vivid, culture-rich artwork.",
+    email: "erinepalba@gmail.com", phone: "+62 821 7704 4970",
+    instagram: "https://instagram.com/rinetaku", linkedin: "", behance: "https://www.behance.net/erinepalba", photo: "",
+  },
+  experience: [
+    { period: "2023 – now", role: "Graphic Designer & Digital Marketing", company: "PT. Graha Mitra Lestarindo" },
+    { period: "2020 – now", role: "Freelancer Designer", company: "Independent" },
+    { period: "2022", role: "MT Sales Supervisor", company: "PT. Unitama Sarimas" },
+    { period: "2021", role: "Architectural Intern – 3D Building Designer", company: "PT. Faya Kuntura Agung Konsultindo" },
+  ],
+  achievements: [
+    { level: "National", title: "1st winner – Illustration Competition (Indonesia–China friendship)", org: "Konsulat Jenderal RRC Denpasar, 2022" },
+    { level: "National", title: "1st winner – Poster Synergies in Humanity", org: "Sekolah Relawan, 2022" },
+    { level: "National", title: "1st winner – Indonesia Bangkit NFT Competition", org: "True NFT Indonesia, 2021" },
+    { level: "National", title: "2nd winner – Rice Cooker Design Competition", org: "Cosmos Indonesia, 2021" },
+    { level: "National", title: "2nd winner – T-shirt Design", org: "Matsuda Apparel, 2022" },
+    { level: "National", title: "3rd winner – Poster ECOLUTION ID", org: "Ecolution.id, 2022" },
+    { level: "National", title: "Top 10 posters – Hoax, hate speech & fraud", org: "Tular Nalar, 2023" },
+    { level: "Regional", title: "1st winner – Colour4Life Competition", org: "Faber-Castell, 2021" },
+  ],
+  categories: ["Mascot", "Illustration", "Character", "Printing", "Apparel", "Packaging", "Social Media"],
+  projects: [
+    P("graco", "Graco – Coconut Mascot", "Mascot", "2023", "Friendly and confident coconut mascot for PT Graha Mitra Lestarindo's branding, used across social media, marketing material and packaging. Includes the full ideation process.", [5, 6]),
+    P("siko", "SIKO – Museum Adityawarman Mascot", "Mascot", "2023", "Mascot inspired by the Padang word 'Siko' (here) with a Minangkabau rumah gadang roof, shown with merchandise.", [7]),
+    P("female", "Female Character Illustration", "Character", "2023", "Character illustration from sketch to final colour with a warm orange palette.", [8]),
+    P("chomi", "Chomi & Chimi", "Character", "2023", "Original chinchilla duo character branding for merchandise and sticker sheets.", [9]),
+    P("print", "Brochure & Company Profile", "Printing", "2023", "Tri-fold brochure and company profile for PT Graha Mitra Lestarindo.", [10, 11]),
+    P("sumpah", "Bersatu dalam Sumpah Pemuda", "Illustration", "2021", "National competition illustration about youth from many ethnic groups united by a shared determination. Applied to UBS Gold Bar cards.", [12]),
+    P("bni24", "BNI Calendar 2024", "Illustration", "2024", "An illustrated calendar blending artwork with everyday function.", [13, 14]),
+    P("sultra", "Bank Sultra Calendar 2025", "Illustration", "2025", "Illustrations of Southeast Sulawesi culture, endemic animals and traditional fabrics, after extensive research.", [15]),
+    P("mandala", "Mandala Finance × Mantis Calendar 2025", "Illustration", "2025", "Mandala Finance as a true friend through every step of a customer's life journey.", [16, 17]),
+    P("chengho", "Cheng Ho, Sang Penjelajah Tanpa Menjajah", "Illustration", "2022", "1st winner, illustration competition by the Consulate General of the PRC in Bali.", [18]),
+    P("wondr", "WONDR BNI – Annual Report Cover 2024", "Illustration", "2024", "Cover celebrating BNI's leap into digital banking with the launch of WONDR.", [19]),
+    P("bni23", "BNI Annual Report 2023 – From Local to Global", "Illustration", "2023", "Cover illustration for BNI's corporate transformation theme.", [20, 21]),
+    P("telkom", "Telkom Indonesia Illustration Competition", "Illustration", "2022", "Favourite winner. Theme: Digitalization to Free the Nation – Synergy and Future Hope.", [22, 23]),
+    P("tehbotol", "Teh Botol Sosro × Erine", "Packaging", "2025", "Bottle artwork celebrating Indonesian traditions of living in harmony with nature: Sasi, Tembawang and Subak.", [24, 25]),
+    P("tular", "Tular Nalar Poster", "Illustration", "2023", "Poster on hoaxes and online scams. Top 10 entry.", [26]),
+    P("beauty", "Beauty in Pain – T-shirt", "Apparel", "2024", "3rd place, Rekhas Apparel competition. A wounded heroic figure symbolising Indonesia's beauty and hidden struggles.", [27]),
+    P("nusantara", "Nusantara Delights – T-shirt", "Apparel", "2022", "2nd place, Matsuda Apparel competition celebrating traditional Indonesian snacks.", [28]),
+    P("hugo", "Hugo – NFT Character", "Character", "2022", "Attributes and custom designs for Hugo, a cyberpunk humanoid lizard in the Anagata NFT project.", [29]),
+    P("perfume", "Perfect Perfume", "Social Media", "2024", "Social media ad concepts for a perfume brand.", [30]),
+    P("pack", "Charcoal Packaging", "Packaging", "2024", "Box dielines and packaging for coconut charcoal briquettes.", [31, 32]),
+    P("gml", "Instagram Content – Graha Mitra Lestarindo", "Social Media", "2023", "Monthly themed content: product shots, thumbnails, captions and engagement tracking.", [33, 34, 35, 36]),
+  ],
+};

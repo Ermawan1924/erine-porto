@@ -1,5 +1,5 @@
-node_modules/
+node_modules
+.next
+.env*.local
+.vercel
 .env
-data/content.json
-public/uploads/*
-!public/uploads/.gitkeep
